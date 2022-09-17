@@ -5,8 +5,12 @@ const { reset } = require('nodemon');
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-app.get('/'), (req, res) => {
-    res.render('index');
+const PORT = process.env.PORT || 3500;
+app.set('view engine', 'ejs')
+app.use(express.static('public'))
+
+app.get(''), (req, res) => {
+    res.render('');
 }
 
 app.get('/lagence', (req, res) => {
@@ -29,4 +33,4 @@ app.get('/contacts', (req, res) => {
     res.render('contacts');
 })
 
-app.listen(3000, () => console.log('Server is listening on port 3000!'));
+app.listen(PORT, ()=>console.log('Server is listening on port ${PORT}'));

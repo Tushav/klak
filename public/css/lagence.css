@@ -1,0 +1,6 @@
+.div.photo {
+    background-image: url("./images/YOUTUBE2048X1152.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
